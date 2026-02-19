@@ -45,7 +45,11 @@ export default function Nav() {
             </button>
           </>
         ) : (
-          <a href="/login">ログイン</a>
+          <>
+            <a href="/login">ログイン</a>
+            {' | '}
+            <a href="/register">新規登録</a>
+          </>
         )}
       </span>
     </header>

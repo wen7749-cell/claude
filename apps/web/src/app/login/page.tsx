@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation'
 
 export default function LoginPage() {
   const router = useRouter()
-  const [email, setEmail] = useState('test@lifelink.local')
+  const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
@@ -43,9 +43,6 @@ export default function LoginPage() {
   return (
     <div style={{ maxWidth: '360px', margin: '40px auto' }}>
       <h1 style={{ marginBottom: '4px' }}>ログイン</h1>
-      <p style={{ color: '#777', fontSize: '0.85rem', marginBottom: '20px' }}>
-        MVP テスト用: <code>test@lifelink.local</code> / <code>lifelink</code>
-      </p>
 
       <form onSubmit={handleSubmit}>
         <label>
@@ -77,6 +74,10 @@ export default function LoginPage() {
           {loading ? '確認中...' : 'ログイン'}
         </button>
       </form>
+
+      <p style={{ marginTop: '16px', fontSize: '0.85rem', color: '#555' }}>
+        アカウントをお持ちでない方は <a href="/register">新規登録</a>
+      </p>
     </div>
   )
 }
