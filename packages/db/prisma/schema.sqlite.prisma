@@ -1,14 +1,12 @@
-// LifeLink — Prisma schema
-// Production: PostgreSQL (Neon / Vercel Postgres)
-// Local dev: set DATABASE_URL to your Neon URL in apps/web/.env.local
-// To revert to SQLite locally: copy schema.sqlite.prisma over this file
+// LifeLink — Prisma schema (MVP)
+// SQLite for local development. Switch provider to postgresql for production.
 
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
