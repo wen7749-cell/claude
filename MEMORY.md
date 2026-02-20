@@ -25,4 +25,9 @@ Rules:
 - All 3 pages (/self, /story, /links) now use fetch() → API routes → Prisma DB
 - API routes: /api/self/answers, /api/story/profile, /api/story/events, /api/links/connections (CRUD)
 - Auth guard in all API routes via getSessionUser(); pages show login prompt if unauthenticated
+- Git initialized: master branch, 3 commits
+- User registration: /register, POST /api/auth/register, bcrypt (cost 12), auto-login after register
+- CredentialsProvider now looks up DB user (hardcoded test account removed)
+- Vercel prep: vercel.json, .env.example, postinstall (auto prisma generate), docs/deploy.md
+- Production schema: packages/db/prisma/schema.postgresql.prisma → copy to schema.prisma for Vercel deploy
 - Lint: clean. Dev server: ✓ Ready in 15s
